@@ -1,6 +1,6 @@
 import { RouteObject } from "react-router-dom";
 import { CutiTable } from "./feature/CutiTable";
-// import { CutiCreate } from "./feature/CutiCreate";
+import { CutiCreate } from "./feature/CutiCreate";
 import { RoleGate } from "./feature/RoleGate";
 import { Layout } from "./feature/Layout";
 // import { CutiDetail } from "./feature/CutiDetail";
@@ -33,14 +33,14 @@ export const routes: RouteObject[] = [
                             </RoleGate>
                         ),
                     },
-                    // {
-                    //     path: "create",
-                    //     element: (
-                    //         <RoleGate allowed="Pegawai">
-                    //             <CutiCreate />
-                    //         </RoleGate>
-                    //     ),
-                    // },
+                    {
+                        path: "create",
+                        element: (
+                            <RoleGate allowed="Pegawai">
+                                <CutiCreate />
+                            </RoleGate>
+                        ),
+                    },
                     // {
                     //     path: ":id",
                     //     element: (

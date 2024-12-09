@@ -1,9 +1,9 @@
 import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useArtikelDetail, useArtikelEdit } from "../api/artikel";
 import { Link, useParams } from "react-router-dom";
 import { Button, Input } from "alurkerja-ui";
 import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
 
 const artikelEditFormSchema = z.object({
     name: z.string().min(1, { message: "Nama wajib diisi" }),

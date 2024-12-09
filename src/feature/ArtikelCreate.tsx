@@ -13,10 +13,9 @@ type ArtikelCreateFormSchema = z.infer<typeof artikelCreateFormSchema>;
 
 export function ArtikelCreate() {
     const { mutate, isPending, error } = useArtikelCreate();
-    const { register, handleSubmit, formState } =
-        useForm<ArtikelCreateFormSchema>({
-            resolver: zodResolver(artikelCreateFormSchema),
-        });
+    const { register, handleSubmit, formState } = useForm<ArtikelCreateFormSchema>({
+        resolver: zodResolver(artikelCreateFormSchema),
+    });
 
     const nameError = formState.errors["name"];
     const reasonError = formState.errors["description"];
@@ -43,9 +42,7 @@ export function ArtikelCreate() {
             </div>
 
             <div>
-                <Link to=".." className="w-fit">
-                    Kembali
-                </Link>
+                <Link to=".." className="w-fit">Kembali</Link>
                 <Button loading={isPending}>Kirim</Button>
             </div>
 
